@@ -1,5 +1,6 @@
 require 'pry'
 
+
 holiday_supplies = {
   :winter => {
     :christmas => ["Lights", "Wreath"],
@@ -140,9 +141,3 @@ def all_holidays_with_bbq(holiday_hash)
 end
 
 all_holidays_with_bbq(holiday_supplies)
-
-
-
-
-
-
