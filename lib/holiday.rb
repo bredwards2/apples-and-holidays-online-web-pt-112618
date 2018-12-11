@@ -1,5 +1,6 @@
 require 'pry'
 
+
 holiday_supplies = {
   :winter => {
     :christmas => ["Lights", "Wreath"],
@@ -20,17 +21,13 @@ def second_supply_for_fourth_of_july(holiday_supplies)
   holiday_supplies[:summer][:fourth_of_july][1]
 end
 
-second_supply_for_fourth_of_july(holiday_supplies)
-
-
-# Learn.co Textbook solution
 def add_supply_to_winter_holidays(holiday_hash, item)
  holiday_hash[:winter].each do |holiday, decorations|
    decorations << item
   end
 end
 
-# My alternative
+#or
 def add_supply_to_winter_holidays(holiday_hash, item)
  holiday_hash[:winter].each do |holiday, decorations|
    decorations.push(item)
@@ -38,27 +35,11 @@ def add_supply_to_winter_holidays(holiday_hash, item)
 end
 
 
-add_supply_to_winter_holidays(holiday_supplies, "Baloons")
-
-# This will not word because the sub-hashes are not somple array-string values
-#def add_supply_to_winter_holidays(holiday_hash, supply)
-#  holiday_hash.each do |season, holiday|
-#    holiday.each do |holiday, supplies|
-#      if holiday == :winter
-#        supplies.push{supply}
-#      end
-#    end
-#  end
-#end
-
-
 def add_supply_to_memorial_day(holiday_hash, supply)
   # again, holiday_hash is the same as the ones above
   # add the second argument to the memorial day array
   holiday_hash[:spring][:memorial_day].push(supply)
 end
-
-add_supply_to_memorial_day(holiday_supplies, "baloons")
 
 
 #def add_new_holiday_with_supplies(holiday_hash, season, holiday_name, supply_array)
@@ -140,9 +121,5 @@ def all_holidays_with_bbq(holiday_hash)
 end
 
 all_holidays_with_bbq(holiday_supplies)
-
-
-
-
 
 
